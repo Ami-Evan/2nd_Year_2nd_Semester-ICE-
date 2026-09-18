@@ -1,0 +1,36 @@
+### Theory
+
+The **N-Queens Problem** is a classical problem in computer science where we have to place `N` queens on an `N × N` chessboard. The main condition is that **no two queens can attack each other**. Therefore, no two queens can be placed in the same row, same column, or same diagonal.
+
+In this program, the **Backtracking technique** is used to find a solution. We place one queen in each row and check whether the position is safe. If the position is safe, we move to the next row. If we cannot place a queen in the next row, we go back to the previous row and change the position of the queen. This process continues until all queens are placed successfully.
+
+### Algorithm
+
+1. **Start** the program.
+2. Take the number of queens `N` as input.
+3. Create an `N × N` chessboard using a vector and initialize all cells to `0`.
+4. Start placing queens from the first row.
+5. For each row, check every column to find a safe position.
+6. A position is safe if there is no queen in the same column or diagonal.
+7. If the position is safe, place a queen by setting the cell to `1`.
+8. Recursively move to the next row.
+9. If no safe position is found, remove the previously placed queen and try another position. This is called **backtracking**.
+10. Continue the process until all `N` queens are placed.
+11. Display the chessboard where `1` represents a queen and `0` represents an empty position.
+12. **Stop** the program.
+
+
+
+
+যদি input দাও:
+
+4
+
+তাহলে output হবে:
+
+0 1 0 0
+0 0 0 1
+1 0 0 0
+0 0 1 0
+
+এখানে 1 = Queen এবং 0 = Empty cell।

@@ -1,0 +1,56 @@
+Theory
+
+A Queue is a linear data structure that follows the FIFO (First In, First Out) principle. It means the element inserted first is removed first.
+
+In this experiment, a C++ vector is used to implement the queue.
+
+The main operations of a queue are:
+
+Enqueue: Adds a new element to the rear of the queue.
+Dequeue: Removes the element from the front of the queue.
+Front: Shows the first element of the queue without removing it.
+Size: Returns the number of elements in the queue.
+Empty: Checks whether the queue is empty or not.
+
+For a vector-based implementation, push_back() is used to insert an element at the rear, and erase() is used to remove the front element.
+
+Algorithm
+
+Step 1: Start the program.
+
+Step 2: Create an empty vector named q to store queue elements.
+
+Step 3: Take the number of elements from the user.
+
+Step 4: Take the elements from the user and insert them into the queue using push_back().
+
+Step 5: Perform the Front operation to display the first element of the queue.
+
+Step 6: Perform the Size operation to display the number of elements in the queue.
+
+Step 7: Perform the Empty operation to check whether the queue is empty.
+
+Step 8: Perform the Dequeue operation to remove the first element using erase().
+
+Step 9: Again display the front element, size, and empty status of the queue.
+
+Step 10: Stop the program.
+
+Sample Input
+Enter number of elements: 4
+Enter 4 elements:
+10 20 30 40
+Sample Output
+10 inserted into queue
+20 inserted into queue
+30 inserted into queue
+40 inserted into queue
+
+Front element: 10
+Queue size: 4
+Queue is not empty
+
+10 removed from queue
+Front element: 20
+Queue size: 3
+Queue is not empty

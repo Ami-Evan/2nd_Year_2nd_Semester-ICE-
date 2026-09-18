@@ -1,0 +1,5 @@
+This is a simple text file. Pattern matching is an important algorithm. We can search a pattern from this text.
+Hello, my name is Evan.
+I am learning C++ programming.
+Pattern matching is an important topic.
+I love competitive programming.

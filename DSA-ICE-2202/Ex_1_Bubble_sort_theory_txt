@@ -1,0 +1,16 @@
+Theory
+
+Bubble Sort is a simple sorting algorithm used to arrange elements in ascending or descending order. It repeatedly compares two adjacent elements and swaps them if they are in the wrong order.
+
+In each pass, the largest element moves to the end of the unsorted part of the array. This process continues until the whole array is sorted.
+
+Algorithm
+Start with the given array.
+Compare two adjacent elements.
+If the first element is greater than the second element, swap them.
+Continue comparing adjacent elements up to the end of the array.
+After one pass, the largest element reaches the last position.
+Repeat the same process for the remaining unsorted elements.
+Continue until no more elements need to be swapped.
+Display the sorted array.
+Stop.

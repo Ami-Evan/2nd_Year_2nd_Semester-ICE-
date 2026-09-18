@@ -1,0 +1,56 @@
+Theory:
+
+A Stack is a linear data structure that follows the LIFO (Last In, First Out) principle. It means the element inserted last is removed first.
+
+In this experiment, a C++ vector is used to implement the stack. The end of the vector is considered as the top of the stack.
+
+The main operations of a stack are:
+
+Push: Adds a new element to the top of the stack.
+Pop: Removes the top element from the stack.
+Top: Shows the top element without removing it.
+Size: Returns the number of elements currently in the stack.
+Empty: Checks whether the stack contains any element or not.
+
+C++ vector functions such as push_back(), pop_back(), back(), size(), and empty() are used to perform these operations.
+
+Algorithm:
+
+Step 1: Start the program.
+
+Step 2: Create an empty vector named st to store stack elements.
+
+Step 3: Take the number of elements from the user.
+
+Step 4: Take the elements from the user and insert them into the stack using push_back().
+
+Step 5: Perform the Top operation using back() to display the top element.
+
+Step 6: Perform the Size operation using size() to display the number of elements.
+
+Step 7: Perform the Empty operation using empty() to check whether the stack is empty.
+
+Step 8: Perform the Pop operation using pop_back() to remove the top element.
+
+Step 9: Again display the top element, size, and empty status of the stack.
+
+Step 10: Stop the program.
+
+Sample Input
+Enter number of elements: 4
+Enter 4 elements:
+10 20 30 40
+Sample Output
+10 pushed into stack
+20 pushed into stack
+30 pushed into stack
+40 pushed into stack
+
+Top element: 40
+Stack size: 4
+Stack is not empty
+
+40 popped from stack
+Top element: 30
+Stack size: 3
+Stack is not empty

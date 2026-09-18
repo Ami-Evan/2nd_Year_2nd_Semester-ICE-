@@ -1,0 +1,48 @@
+Theory:
+### Theory
+
+Quick Sort is a sorting algorithm that uses the **Divide and Conquer** technique. It selects one element from the array 
+as a **pivot** and rearranges the other elements around the pivot.
+
+The elements smaller than the pivot are placed on the left side, and the elements greater than the pivot are placed on the 
+right side. After that, the same process is repeated for the left and right parts of the array.
+
+In this experiment, the **last element is selected as the pivot**. The partition function places the pivot in its 
+correct position and returns its position. Then Quick Sort is applied recursively to the left and right parts.
+
+The average time complexity of Quick Sort is **O(n log n)**, while the worst-case time complexity is **O(n²)**.
+
+Algorithm:
+### Algorithm
+
+**Step 1:** Start.
+
+**Step 2:** Input the number of elements `n`.
+
+**Step 3:** Create a vector and input all the elements.
+
+**Step 4:** Select the last element as the pivot.
+
+**Step 5:** Set `i = low - 1`.
+
+**Step 6:** Compare each element with the pivot.
+
+* If the element is smaller than the pivot, increase `i`.
+* Swap the current element with the element at position `i`.
+
+**Step 7:** Place the pivot in its correct position.
+
+**Step 8:** The position of the pivot divides the vector into two parts.
+
+**Step 9:** Apply Quick Sort recursively to the left part.
+
+**Step 10:** Apply Quick Sort recursively to the right part.
+
+**Step 11:** Continue until each part contains zero or one element.
+
+**Step 12:** Print the sorted vector.
+
+**Step 13:** Stop.
+
+
+

@@ -1,0 +1,46 @@
+Theory
+
+Pattern Matching is a technique used to find the occurrence of a given pattern (substring) inside a text.
+
+In this program, the Naive Pattern Matching Algorithm is used. First, the text is read from a text file. Then, the user gives a pattern to search. The algorithm compares the pattern with every possible position of the text, character by character. If all characters match, the position of the pattern is displayed. If no match is found, a message is displayed.
+
+Algorithm
+
+Step 1: Start the program.
+
+Step 2: Open the text file and read the text from it.
+
+Step 3: Take the pattern as input from the user.
+
+Step 4: Find the length of the text n and pattern m.
+
+Step 5: Start comparing the pattern with the text from position 0 to n-m.
+
+Step 6: Compare each character of the pattern with the corresponding character of the text.
+
+Step 7: If all characters match, display the starting position of the pattern.
+
+Step 8: Continue searching for other occurrences of the pattern.
+
+Step 9: If the pattern is not found anywhere, display "Pattern not found!"
+
+Step 10: Close the file and end the program.
+
+
+
+
+
+
+text.txt file
+
+Program-er same folder-e text.txt নামে একটা file বানাবে:
+
+This is a simple text file. Pattern matching is an important algorithm. We can search a pattern from this text.
+Example Run
+Enter the pattern: pattern
+Pattern found at position: 25
+Pattern found at position: 79
+
+Note: Position 0 থেকে count হচ্ছে। অর্থাৎ প্রথম character-এর position = 0.
+
+এইটা Naive Pattern Matching। এখানে text.txt থেকে পুরো text নিয়ে তার মধ্যে তোমার দেওয়া pattern খুঁজবে।

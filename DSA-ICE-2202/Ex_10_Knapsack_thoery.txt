@@ -1,0 +1,41 @@
+### Theory
+
+The **0/1 Knapsack Problem** is an optimization problem where we have a number of items, and each item has a **profit** and a **weight**. We have a knapsack with a fixed capacity, and our goal is to select items so that the **total profit is maximum** without exceeding the capacity.
+
+In **0/1 Knapsack**, each item can either be **selected (1)** or **not selected (0)**. An item cannot be selected more than once.
+
+In this program, the **Dynamic Programming** approach is used. A table `dp[i][j]` is used to store the maximum profit obtained using the first `i` items with capacity `j`.
+
+### Algorithm
+
+1. **Start** the program.
+2. Initialize the number of items `n`, knapsack capacity `C`, profits `P[]`, and weights `W[]`.
+3. Create a DP table `dp[n+1][C+1]` and initialize it with `0`.
+4. Set `i = 1` and consider each item one by one.
+5. For each capacity `j` from `0` to `C`:
+
+   * If the weight of the current item is less than or equal to `j`, choose the maximum between:
+
+     * Not taking the item.
+     * Taking the item and adding its profit.
+   * Otherwise, do not take the item.
+6. Store the maximum profit in `dp[i][j]`.
+7. Repeat the process for all items.
+8. The value `dp[n][C]` gives the maximum possible profit.
+9. Display the maximum profit.
+10. **Stop** the program.
+
+
+
+
+Output
+Maximum Profit = 63
+
+এখানে selected items হলো 1, 2, 4:
+
+Item 1 → Weight = 2, Profit = 15
+Item 2 → Weight = 6, Profit = 25
+Item 4 → Weight = 9, Profit = 23
+
+Total weight = 2 + 6 + 9 = 17
+Total profit = 15 + 25 + 23 = 63 

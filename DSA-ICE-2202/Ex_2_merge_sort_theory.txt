@@ -1,0 +1,49 @@
+
+
+## Theory
+
+**Merge Sort** is a popular sorting algorithm used to arrange the elements of an array in ascending or descending order. It follows the **Divide and Conquer** technique.
+
+In Merge Sort, the given array is first divided into two smaller halves. Then, each half is again divided into smaller parts until each part contains only one element. A single element is considered already sorted. After that, the smaller parts are merged together by comparing their elements. During merging, the elements are placed in the correct sorted order.
+
+This process continues until all the parts are merged into one complete sorted array. Merge Sort is useful for sorting a large number of elements efficiently.
+
+## Algorithm
+
+1. **Start** the algorithm.
+2. Take the number of elements and store them in an array.
+3. Set `left = 0` and `right = n-1`.
+4. Check whether `left < right`.
+5. Find the middle position using:
+   `mid = (left + right) / 2`.
+6. Divide the array into two parts:
+
+   * Left part: `left` to `mid`
+   * Right part: `mid+1` to `right`
+7. Recursively apply Merge Sort to the left part.
+8. Recursively apply Merge Sort to the right part.
+9. Compare the elements of the two sorted parts.
+10. Store the smaller element in a temporary array.
+11. Continue comparing until all elements of both parts are merged.
+12. Copy the elements from the temporary array back to the original array.
+13. Repeat the process until the complete array is sorted.
+14. Display the sorted array.
+15. **Stop** the algorithm.
+
+
+Input
+Enter number of elements: 8
+Enter elements: 45 12 78 23 9 34 67 15
+Output
+Initial Array: 45 12 78 23 9 34 67 15
+
+Merge Sort Steps:
+Merge: 12 45
+Merge: 23 78
+Merge: 12 23 45 78
+Merge: 9 34
+Merge: 15 67
+Merge: 9 15 34 67
+Merge: 9 12 15 23 34 45 67 78
+
+Sorted Array: 9 12 15 23 34 45 67 78

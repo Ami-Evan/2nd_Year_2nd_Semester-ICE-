@@ -1,0 +1,59 @@
+
+
+## Theory
+
+Binary Search is a searching algorithm used to find an element in a **sorted array or vector**.
+
+It works by checking the middle element of the list. If the middle element is equal to the required element, the search is successful. If the required element is smaller, we search in the left half. If it is larger, we search in the right half.
+
+This process continues until the element is found or there are no elements left to search.
+
+**Note:** Binary Search requires the elements to be in sorted order.
+
+---
+
+## Algorithm
+
+1. Start with `low = 0` and `high = n - 1`.
+
+2. Find the middle position:
+
+   ```text
+   mid = (low + high) / 2
+   ```
+
+3. Compare the middle element with the required element.
+
+4. If the middle element is equal to the required element, print **Element Found**.
+
+5. If the required element is smaller than the middle element, search in the **left half** by setting:
+
+   ```text
+   high = mid - 1
+   ```
+
+6. If the required element is larger than the middle element, search in the **right half** by setting:
+
+   ```text
+   low = mid + 1
+   ```
+
+7. Repeat steps 2–6 until the element is found or `low > high`.
+
+8. If the element is not found, print **Element Not Found**.
+
+
+Sample Input
+Enter number of elements: 8
+Enter elements in sorted order: 10 20 30 40 50 60 70 80
+Enter element to search: 60
+Sample Output
+Binary Search Steps:
+
+Low = 0, Mid = 3, High = 7
+Middle element = 40
+Search in right half
+
+Low = 4, Mid = 5, High = 7
+Middle element = 60
+Element found at position 6
