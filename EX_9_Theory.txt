@@ -1,0 +1,31 @@
+Theory:
+The Sum of Subset problem is used to find a subset of given numbers whose sum is equal to a given target value.
+
+In this problem, we have a set of numbers and a target sum. We check whether some numbers can be selected to make the target sum.
+
+We use **backtracking** to solve this problem. For each number, we have two choices: either include the number in the subset or
+ exclude it. If the sum becomes equal to the target, we have found a solution. If the sum becomes greater than the target, 
+ we stop that path and go back to try another choice.
+
+For example, for the set {5, 10, 12, 13, 15, 18} and target 30, some solutions are {5, 12, 13}, {5, 10, 15}, and {12, 18}.
+
+Algorithm:
+1. Start with an empty subset and set the sum to 0.
+
+2. Take the numbers one by one from the given set.
+
+3. For each number, make two choices:
+
+   * Include the number in the subset.
+   * Do not include the number.
+
+4. If the current sum is equal to the target value, print the subset.
+
+5. If the current sum is greater than the target, stop that path and go back.
+
+6. Continue checking the remaining numbers using recursion.
+
+7. Repeat the process until all possible subsets are checked.
+
+8. Stop the program.
+
