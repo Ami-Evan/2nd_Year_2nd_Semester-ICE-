@@ -1,0 +1,21 @@
+### Theory
+
+The **Tower of Hanoi** is a classic problem based on **recursion**. It consists of `N` disks and three rods: **Source (A), Auxiliary (B), and Destination (C)**.
+
+The main goal is to move all the disks from the Source rod to the Destination rod. Only one disk can be moved at a time, and a larger disk cannot be placed on top of a smaller disk.
+
+The problem is solved recursively by first moving `N-1` disks to the auxiliary rod, then moving the largest disk to the destination rod, and finally moving the `N-1` disks from the auxiliary rod to the destination rod.
+
+### Algorithm
+
+1. **Start** the program.
+2. Take the number of disks `N` as input.
+3. If `N = 1`, move the disk directly from Source to Destination.
+4. Otherwise, recursively move `N-1` disks from Source to Auxiliary.
+5. Move the largest disk from Source to Destination.
+6. Recursively move the `N-1` disks from Auxiliary to Destination.
+7. Repeat the process until all disks are moved.
+8. Display all the disk movements.
+9. **Stop** the program.
+
+**Number of moves:** `2^N - 1`
