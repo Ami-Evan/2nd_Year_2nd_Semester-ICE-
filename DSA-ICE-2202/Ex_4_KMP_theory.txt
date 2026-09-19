@@ -1,46 +1,45 @@
-Theory
+## Theory
 
-Pattern Matching is a technique used to find the occurrence of a given pattern (substring) inside a text.
+**Knuth-Morris-Pratt (KMP)** is a string matching algorithm used to find a given **pattern (word)** in a **text** efficiently.
 
-In this program, the Naive Pattern Matching Algorithm is used. First, the text is read from a text file. Then, the user gives a pattern to search. The algorithm compares the pattern with every possible position of the text, character by character. If all characters match, the position of the pattern is displayed. If no match is found, a message is displayed.
+In this program, the text is read from a `.txt` file. The user gives a word as the pattern, and the KMP algorithm searches for that word in the file.
 
-Algorithm
+KMP uses an **LPS (Longest Prefix which is also Suffix)** array. The LPS array helps the algorithm avoid comparing characters that have already been matched. Therefore, it is faster than the simple/brute-force pattern matching method.
 
-Step 1: Start the program.
+**Time Complexity:** `O(n + m)`
+where,
 
-Step 2: Open the text file and read the text from it.
+* `n` = length of the text
+* `m` = length of the pattern
 
-Step 3: Take the pattern as input from the user.
+**Space Complexity:** `O(m)`
 
-Step 4: Find the length of the text n and pattern m.
+---
 
-Step 5: Start comparing the pattern with the text from position 0 to n-m.
+## Algorithm
 
-Step 6: Compare each character of the pattern with the corresponding character of the text.
+1. **Start**
+2. Open the text file using `ifstream`.
+3. Check whether the file was opened successfully.
+4. Read all the lines from the text file and store them in a string called `text`.
+5. Take the search word/pattern as input from the user.
+6. Create the **LPS array** for the given pattern:
 
-Step 7: If all characters match, display the starting position of the pattern.
+   * Compare characters of the pattern.
+   * If they match, increase the prefix length and store it in the LPS array.
+   * If they do not match, use the previously calculated LPS value.
+7. Set two pointers:
 
-Step 8: Continue searching for other occurrences of the pattern.
+   * `i` for the text
+   * `j` for the pattern
+8. Compare `text[i]` with `pattern[j]`.
+9. If they match, increase both `i` and `j`.
+10. If the complete pattern is matched, print its position.
+11. After finding a match, use the LPS array to continue searching for another occurrence.
+12. If a mismatch occurs:
 
-Step 9: If the pattern is not found anywhere, display "Pattern not found!"
-
-Step 10: Close the file and end the program.
-
-
-
-
-
-
-text.txt file
-
-Program-er same folder-e text.txt নামে একটা file বানাবে:
-
-This is a simple text file. Pattern matching is an important algorithm. We can search a pattern from this text.
-Example Run
-Enter the pattern: pattern
-Pattern found at position: 25
-Pattern found at position: 79
-
-Note: Position 0 থেকে count হচ্ছে। অর্থাৎ প্রথম character-এর position = 0.
-
-এইটা Naive Pattern Matching। এখানে text.txt থেকে পুরো text নিয়ে তার মধ্যে তোমার দেওয়া pattern খুঁজবে।
+    * If `j != 0`, update `j` using the LPS array.
+    * Otherwise, increase `i`.
+13. Continue until the end of the text.
+14. If no match is found, display **"Pattern not found!"**
+15. **Stop**.
