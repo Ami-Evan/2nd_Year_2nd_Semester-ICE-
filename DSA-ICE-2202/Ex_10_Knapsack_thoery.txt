@@ -28,6 +28,18 @@ In this program, the **Dynamic Programming** approach is used. A table `dp[i][j]
 
 
 
+
+Input
+Enter number of items: 4
+Enter capacity: 20
+Enter profits: 15 25 13 23
+Enter weights: 2 6 12 9
+Output
+Maximum Profit = 63
+
+
+
+
 Output
 Maximum Profit = 63
 

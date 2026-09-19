@@ -45,4 +45,20 @@ Algorithm:
 **Step 13:** Stop.
 
 
+Sample Input
+Enter number of elements: 8
+Enter elements: 45 12 78 23 9 34 67 15
+Sample Output
+Initial Array: 45 12 78 23 9 34 67 15
+
+Quick Sort Steps:
+Pivot = 15 : 9 12 15 23 45 34 67 78
+Pivot = 12 : 9 12 15 23 45 34 67 78
+Pivot = 78 : 9 12 15 23 45 34 67 78
+Pivot = 67 : 9 12 15 23 45 34 67 78
+Pivot = 34 : 9 12 15 23 34 45 67 78
+
+Final Sorted Array: 9 12 15 23 34 45 67 78
+
+
 
