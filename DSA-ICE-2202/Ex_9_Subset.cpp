@@ -36,86 +36,56 @@ int main() {
 
 
 
-//using array
+//using vector
 /*
 #include <iostream>
+#include <vector>
 using namespace std;
 
-#define SIZE 5
+vector<int> s;
+vector<int> subset;
+int n, d;
 
-int stackArr[SIZE];
-int topIndex = -1;
-
-// Push operation
-void push(int value)
+void findSubset(int index, int sum)
 {
-    if (topIndex == SIZE - 1)
+    if (sum == d)
     {
-        cout << "Stack is full" << endl;
+        cout << "Subset found: ";
+
+        for (int x : subset)
+            cout << x << " ";
+
+        cout << endl;
         return;
     }
 
-    topIndex++;
-    stackArr[topIndex] = value;
-
-    cout << value << " pushed into stack" << endl;
-}
-
-// Pop operation
-void pop()
-{
-    if (topIndex == -1)
-    {
-        cout << "Stack is empty" << endl;
+    if (index == n || sum > d)
         return;
-    }
 
-    cout << stackArr[topIndex] << " popped from stack" << endl;
-    topIndex--;
-}
+    // Include current element
+    subset.push_back(s[index]);
+    findSubset(index + 1, sum + s[index]);
 
-// Top operation
-void top()
-{
-    if (topIndex == -1)
-    {
-        cout << "Stack is empty" << endl;
-        return;
-    }
-
-    cout << "Top element: " << stackArr[topIndex] << endl;
-}
-
-// Size operation
-void size()
-{
-    cout << "Stack size: " << topIndex + 1 << endl;
-}
-
-// Empty operation
-void empty()
-{
-    if (topIndex == -1)
-        cout << "Stack is empty" << endl;
-    else
-        cout << "Stack is not empty" << endl;
+    // Exclude current element
+    subset.pop_back();
+    findSubset(index + 1, sum);
 }
 
 int main()
 {
-    push(10);
-    push(20);
-    push(30);
+    cout << "Enter number of elements: ";
+    cin >> n;
 
-    top();
-    size();
-    empty();
+    s.resize(n);
 
-    pop();
+    cout << "Enter elements: ";
+    for (int i = 0; i < n; i++)
+        cin >> s[i];
 
-    top();
-    size();
-    empty();
+    cout << "Enter target sum d: ";
+    cin >> d;
+
+    findSubset(0, 0);
 
     return 0;
 }
