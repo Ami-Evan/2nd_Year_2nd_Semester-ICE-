@@ -1,0 +1,67 @@
+## Experiment: Perform Hypothesis Testing Step-by-Step Using Simulated Data
+
+### Theory
+
+Hypothesis testing is a statistical method used to make a decision about a population parameter using sample data.
+
+In this experiment:
+
+* **Null Hypothesis (H₀):** μ = 5
+* **Alternative Hypothesis (H₁):** μ ≠ 5
+* Significance level, **α = 0.05**
+* A random sample is generated from a normal distribution.
+* A **one-sample t-test** is used to calculate the test statistic and p-value.
+* If **p-value < α**, we reject H₀.
+* Otherwise, we fail to reject H₀.
+
+A boxplot is also used to visualize the sample data and the hypothesized mean.
+
+### Objectives
+
+1. To understand the basic steps of hypothesis testing.
+2. To formulate the null and alternative hypotheses.
+3. To calculate the t-test statistic and p-value.
+4. To make a statistical decision using the significance level.
+5. To visualize the sample data using a boxplot.
+
+### Pseudocode
+
+```text
+START
+
+1. Set random seed.
+
+2. Generate 30 random sample values
+   from a normal distribution with:
+   Mean = 5.5
+   Standard deviation = 2
+
+3. Set significance level:
+   alpha = 0.05
+
+4. Define hypotheses:
+   H0: μ = 5
+   H1: μ ≠ 5
+
+5. Perform one-sample t-test
+   using μ = 5.
+
+6. Calculate:
+   - Test statistic
+   - P-value
+
+7. Compare P-value with alpha.
+
+8. IF P-value < alpha
+      Reject H0
+   ELSE
+      Fail to reject H0
+
+9. Display the test results.
+
+10. Draw a boxplot of the sample data.
+
+11. Add a horizontal line at μ = 5.
+
+END
+```

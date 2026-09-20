@@ -1,0 +1,63 @@
+### Objective
+
+1. To generate random samples from a normal population.
+2. To calculate the median and range of each sample.
+3. To study the distribution of sample medians and sample ranges.
+4. To observe the variation of medians and ranges across many samples.
+
+### Theory
+
+Sampling is the process of selecting observations from a population. When repeated random samples are taken from a population, statistics calculated from those samples also form distributions. These are called **sampling distributions**.
+
+In this experiment, samples of size **20** are generated from a normal population with mean **50** and standard deviation **10**. A total of **1000 samples** are generated.
+
+For each sample, two statistics are calculated:
+
+* **Median:** The middle value of the ordered sample.
+* **Range:** The difference between the maximum and minimum values of the sample.
+
+The 1000 sample medians and 1000 sample ranges are then displayed using histograms. These histograms help us understand how the sample median and range vary from one sample to another.
+
+### Pseudocode
+
+```text
+START
+
+Set random seed = 123
+
+Set sample size n = 20
+
+Set number of simulations = 1000
+
+Create arrays for medians and ranges
+
+FOR i = 1 to 1000
+
+    Generate a random sample of 20 values
+    from Normal distribution with mean = 50
+    and standard deviation = 10
+
+    Calculate the median of the sample
+    Store the median
+
+    Calculate:
+        Range = Maximum value - Minimum value
+
+    Store the range
+
+END FOR
+
+Calculate the mean of all sample medians
+
+Calculate the mean of all sample ranges
+
+Display the calculated means
+
+Plot histogram of sample medians
+
+Plot histogram of sample ranges
+
+Save the graphs in a PDF file
+
+END
+```

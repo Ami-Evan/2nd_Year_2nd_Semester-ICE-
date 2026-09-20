@@ -1,0 +1,60 @@
+## Experiment E2-3: Calculate Efficiency of Estimators — Mean vs Median
+
+### Theory
+
+Estimator efficiency refers to how precisely an estimator estimates an unknown population parameter. For two unbiased estimators of the same parameter, the estimator with **smaller variance** is considered more efficient.
+
+In this experiment, the **sample mean** and **sample median** are used to estimate the population mean. Random samples are generated from a normal distribution with mean **μ = 5** and standard deviation **2**. The simulation is repeated 1000 times.
+
+The variances of the sample means and medians are then compared. The relative efficiency is calculated using the ratio of the variance of the median to the variance of the mean.
+
+### Objectives
+
+1. To understand the concept of estimator efficiency.
+2. To compare the efficiency of the sample mean and sample median.
+3. To calculate the variance of both estimators.
+4. To calculate the relative efficiency of the median with respect to the mean.
+5. To visualize the distributions of the two estimators using a boxplot.
+
+### Pseudocode
+
+```text
+START
+
+Set sample size n = 30
+Set number of simulations = 1000
+Set true mean μ = 5
+
+Create arrays for Mean and Median estimates
+
+FOR i = 1 to 1000
+
+    Generate a random sample of size 30
+    from Normal distribution with mean 5
+    and standard deviation 2
+
+    Calculate sample mean
+    Calculate sample median
+
+    Store both values
+
+END FOR
+
+Calculate variance of all sample means
+
+Calculate variance of all sample medians
+
+Calculate relative efficiency:
+    Variance of Median / Variance of Mean
+
+Display:
+    Variance of Sample Mean
+    Variance of Sample Median
+    Relative Efficiency
+
+Create a boxplot comparing Mean and Median
+
+Draw a horizontal line at true mean = 5
+
+END
+```

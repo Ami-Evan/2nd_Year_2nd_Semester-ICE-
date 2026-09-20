@@ -1,0 +1,56 @@
+
+### Experiment Name
+
+**Simulate Decision-Making Process Using Hypothesis Testing**
+
+### Theory
+
+Hypothesis testing is a statistical method used to make a decision about a population based on sample data.
+
+There are two hypotheses:
+
+* **Null Hypothesis (H₀):** The population mean is 5, i.e., μ = 5.
+* **Alternative Hypothesis (H₁):** The population mean is not 5, i.e., μ ≠ 5.
+
+In this experiment, a sample of 30 observations is generated from a normal distribution with mean 5.5 and standard deviation 2. A **one-sample t-test** is performed to test whether the population mean is significantly different from 5.
+
+The **p-value** is used to make the decision. At a 5% significance level:
+
+* If **p-value < 0.05**, reject H₀.
+* If **p-value ≥ 0.05**, fail to reject H₀.
+
+A histogram is also plotted to visualize the sample data, the hypothesized mean, and the sample mean.
+
+### Objectives
+
+1. To understand the concept of hypothesis testing.
+2. To generate sample data from a normal distribution.
+3. To perform a one-sample t-test.
+4. To calculate the test statistic and p-value.
+5. To make a statistical decision using a 5% significance level.
+6. To visualize the sample data using a histogram.
+
+### Pseudocode
+
+**START**
+
+1. Set the random seed.
+2. Generate 30 random observations from a normal distribution with mean 5.5 and standard deviation 2.
+3. Set the null hypothesis H₀: μ = 5.
+4. Set the alternative hypothesis H₁: μ ≠ 5.
+5. Perform a one-sample t-test.
+6. Calculate the test statistic and p-value.
+7. If p-value < 0.05:
+
+   * Reject H₀.
+8. Otherwise:
+
+   * Fail to reject H₀.
+9. Display the test statistic, p-value, and decision.
+10. Draw a histogram of the sample data.
+11. Draw a vertical line at μ = 5.
+12. Draw another vertical line at the sample mean.
+13. Display the graph with a legend.
+
+**END**
+

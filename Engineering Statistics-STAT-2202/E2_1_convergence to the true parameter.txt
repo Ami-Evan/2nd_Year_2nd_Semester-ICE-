@@ -1,0 +1,52 @@
+## Experiment E2-1: Demonstrate Consistency by Increasing Sample Size
+
+### Theory
+
+Consistency is an important property of an estimator. An estimator is called **consistent** if its value gets closer to the true population parameter as the sample size increases.
+
+In this experiment, samples are generated from a normal distribution with true mean **μ = 5**. The sample mean is calculated for different sample sizes from **10 to 1000**. As the sample size increases, the sample mean generally gets closer to the true mean 5. This demonstrates the **consistency of the sample mean estimator**.
+
+### Objectives
+
+1. To understand the concept of consistency of an estimator.
+2. To generate random samples with a known population mean.
+3. To calculate the sample mean for different sample sizes.
+4. To observe how the sample mean approaches the true mean as sample size increases.
+5. To visualize the convergence using a graph.
+
+### Pseudocode
+
+```text
+START
+
+Set true mean μ = 5
+
+Set sample sizes from 10 to 1000
+with an interval of 10
+
+For each sample size n:
+    Generate n random values
+    from Normal distribution with mean 5 and SD 2
+
+    Calculate the sample mean
+
+    Store the sample mean
+
+Display:
+    Sample mean at n = 10
+    Sample mean at n = 1000
+    True mean
+
+Create a graph:
+    X-axis → Sample Size
+    Y-axis → Sample Mean
+
+Plot sample means
+Draw a horizontal line at true mean μ = 5
+
+Add title, labels and legend
+
+Save the graph as a PDF file
+
+END
+```

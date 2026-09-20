@@ -1,0 +1,53 @@
+
+
+### Objective
+
+* To generate random data from a **Chi-square distribution**.
+* To calculate the **sample mean and sample variance**.
+* To compare the sample values with their **theoretical values**.
+* To plot a histogram and compare it with the **theoretical Chi-square density curve**.
+
+### Theory
+
+The **Chi-square distribution** is a continuous probability distribution used in statistical analysis. It is defined by its **degrees of freedom (df)**.
+
+For a Chi-square distribution with `df` degrees of freedom:
+
+* **Theoretical Mean = df**
+* **Theoretical Variance = 2 × df**
+
+In this experiment, `df = 5` and 1000 random observations are generated. The sample mean and variance are calculated and compared with the theoretical mean and variance. A histogram is plotted to observe the distribution, and the theoretical density curve is added for comparison.
+
+### Pseudocode
+
+```text
+START
+
+Set random seed = 123
+
+Set sample size n = 1000
+Set degrees of freedom df = 5
+
+Generate 1000 random values
+from Chi-square distribution with df = 5
+
+Calculate sample mean
+
+Calculate sample variance
+
+Calculate theoretical mean = df
+
+Calculate theoretical variance = 2 × df
+
+Display sample mean and theoretical mean
+
+Display sample variance and theoretical variance
+
+Plot histogram of the generated data
+
+Add theoretical Chi-square density curve
+
+Display the graph
+
+END
+

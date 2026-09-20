@@ -1,0 +1,56 @@
+## Experiment: Simulate F-Distributed Data and Study Its Relationship with Chi-Square Distributions
+
+### Theory
+
+The **F-distribution** can be constructed using two independent chi-square random variables. If \(X_1\) and \(X_2\) follow chi-square distributions with \(df_1\) and \(df_2\) degrees of freedom, then:
+
+$$
+F = \frac{X_1/df_1}{X_2/df_2}
+$$
+
+In this experiment, two chi-square samples are generated with **df₁ = 5** and **df₂ = 10**. Their ratio is used to generate F-distributed data. A histogram of the simulated F-data is plotted, and the theoretical F-density curve is added for comparison.
+
+### Objectives
+
+1. To understand the F-distribution.
+2. To generate chi-square distributed random samples.
+3. To construct F-distributed data from two chi-square distributions.
+4. To compare the simulated F-distribution with its theoretical density.
+5. To compare the simulated mean with the theoretical mean.
+
+### Pseudocode
+
+```text
+START
+
+1. Set random seed.
+
+2. Set:
+   n = 1000
+   df1 = 5
+   df2 = 10
+
+3. Generate the first chi-square sample
+   with df1 degrees of freedom.
+
+4. Generate the second chi-square sample
+   with df2 degrees of freedom.
+
+5. Calculate F-data using:
+   F = (chi1 / df1) / (chi2 / df2)
+
+6. Calculate the mean of simulated F-data.
+
+7. Calculate the theoretical mean of F-distribution.
+
+8. Display both mean values.
+
+9. Draw a histogram of F-data.
+
+10. Add the theoretical F-density curve
+    to the histogram.
+
+11. Save the graph as a PDF file.
+
+END
+```

@@ -1,0 +1,87 @@
+## Experiment E2-4: Derive MLEs for Binomial, Poisson, and Normal Distributions
+
+### Theory
+
+**Maximum Likelihood Estimation (MLE)** is a method used to estimate unknown parameters of a probability distribution. The idea is to choose the parameter value that makes the observed data most likely.
+
+In this experiment, MLEs are calculated for three distributions:
+
+* **Binomial distribution:**
+  The MLE of probability \(p\) is the sample mean divided by the number of trials.
+* **Poisson distribution:**
+  The MLE of \(\lambda\) is the sample mean.
+* **Normal distribution:**
+  The MLE of the mean \(\mu\) is the sample mean, and the MLE of variance is calculated using division by \(n\).
+
+Simulated data are used to calculate these estimates and compare them with the true parameter values.
+
+### Objectives
+
+1. To understand the concept of Maximum Likelihood Estimation.
+2. To calculate the MLE of \(p\) for a Binomial distribution.
+3. To calculate the MLE of \(\lambda\) for a Poisson distribution.
+4. To calculate the MLEs of mean and variance for a Normal distribution.
+5. To compare estimated parameters with their true values.
+6. To visualize the simulated data using histograms.
+
+### Pseudocode
+
+```text
+START
+
+Set random seed
+
+--------------------------------
+Binomial Distribution
+--------------------------------
+
+Generate 1000 Binomial observations
+Set number of trials = 10
+Set true p = 0.3
+
+Calculate:
+    p_hat = Sample Mean / Number of Trials
+
+Display p_hat and true p
+
+
+--------------------------------
+Poisson Distribution
+--------------------------------
+
+Generate 1000 Poisson observations
+Set true lambda = 4
+
+Calculate:
+    lambda_hat = Sample Mean
+
+Display lambda_hat and true lambda
+
+
+--------------------------------
+Normal Distribution
+--------------------------------
+
+Generate 1000 Normal observations
+Set true mean = 10
+Set true standard deviation = 3
+
+Calculate:
+    mu_hat = Sample Mean
+
+Calculate:
+    var_hat = Sum of squared deviations / n
+
+Display mu_hat and var_hat
+Compare with true mean and true variance
+
+
+Create histograms for:
+    Binomial data
+    Poisson data
+    Normal data
+
+Display all graphs
+
+END
+```

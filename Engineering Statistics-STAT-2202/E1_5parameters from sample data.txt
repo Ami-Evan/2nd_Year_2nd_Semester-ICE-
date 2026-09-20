@@ -1,0 +1,38 @@
+## Objective
+
+1. To generate sample data from a Normal distribution.
+2. To estimate the population mean and variance from the sample.
+3. To calculate the 95% confidence interval for the population mean.
+4. To calculate the 95% confidence interval for the population variance.
+5. To visualize the sample data using a histogram and theoretical Normal curve.
+
+## Theory
+
+Population parameters describe the characteristics of an entire population. The **population mean (μ)** represents the average value, while the **population variance (σ²)** represents the spread of the data.
+
+In this experiment, a sample of **30 observations** is generated from a Normal distribution with mean **5** and standard deviation **2**. The sample mean and sample variance are used to estimate the population parameters.
+
+For the confidence interval of the population mean, the **t-distribution** is used because the population variance is unknown.
+
+For the confidence interval of the population variance, the **Chi-square distribution** is used with **n − 1 degrees of freedom**.
+
+A histogram is used to display the distribution of the sample data. The theoretical Normal curve is added to compare the sample distribution with the expected population distribution. A vertical line represents the calculated sample mean.
+
+## Pseudocode
+
+**START**
+
+1. Set the random seed to 123.
+2. Set sample size `n = 30`.
+3. Generate 30 random observations from Normal distribution with mean 5 and standard deviation 2.
+4. Calculate the sample mean.
+5. Calculate the sample variance.
+6. Calculate the 95% confidence interval for the mean using the t-distribution.
+7. Calculate the 95% confidence interval for the variance using the Chi-square distribution.
+8. Display the sample mean, sample variance, and confidence intervals.
+9. Plot a histogram of the sample data.
+10. Add the theoretical Normal distribution curve.
+11. Add a vertical line representing the sample mean.
+12. Display the graph.
+
+**END**

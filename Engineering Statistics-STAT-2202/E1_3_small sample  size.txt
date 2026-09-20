@@ -1,0 +1,40 @@
+### Objective
+
+1. To compare the t-distribution with the standard normal distribution.
+2. To observe the difference between the two distributions for a small degree of freedom.
+3. To understand that the t-distribution has heavier tails than the normal distribution for small sample sizes.
+4. To visualize both distributions using R.
+
+### Theory
+
+The **t-distribution** is a continuous probability distribution that is commonly used for statistical analysis when the sample size is small and the population standard deviation is unknown.
+
+The shape of the t-distribution depends on the **degrees of freedom (df)**. For a small value of df, the t-distribution has **heavier tails** and a slightly lower peak than the standard normal distribution. This represents greater uncertainty caused by a small sample size.
+
+As the degrees of freedom increase, the t-distribution becomes closer to the standard normal distribution.
+
+In this experiment, the standard normal distribution and t-distribution with **df = 5** are plotted and compared using R.
+
+### Pseudocode
+
+```text
+START
+
+Set degrees of freedom, df = 5
+
+Generate x values from -4 to 4
+
+Calculate normal distribution density using dnorm(x)
+
+Calculate t-distribution density using dt(x, df)
+
+Plot the normal distribution curve
+
+Add the t-distribution curve to the same graph
+
+Add a legend to identify both curves
+
+Display the graph
+
+END
+```

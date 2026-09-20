@@ -1,0 +1,81 @@
+## Experiment: Compare the Power of Different Tests (t-test vs z-test)
+
+### Theory
+
+The **power of a statistical test** is the probability of correctly rejecting the null hypothesis when the alternative hypothesis is true.
+
+In this experiment, the power of a **t-test** and a **z-test** is compared for the same hypothesis.
+
+* **H₀:** μ = 5
+* **H₁:** μ ≠ 5
+* Significance level: **α = 0.05**
+* Sample size: **n = 30**
+* Standard deviation: **σ = 2**
+* True mean values are changed from **5 to 8**.
+* For each true mean, 500 samples are simulated.
+
+The t-test estimates the standard deviation from the sample, while the z-test assumes that the population standard deviation is known. The power of both tests is calculated as the proportion of simulations in which H₀ is rejected.
+
+### Objectives
+
+1. To understand the concept of statistical test power.
+2. To compare the power of t-test and z-test.
+3. To simulate samples with different true mean values.
+4. To calculate the rejection rate of H₀ for both tests.
+5. To visualize the power of both tests using a graph.
+
+### Pseudocode
+
+```text
+START
+
+1. Set random seed.
+
+2. Set:
+   n = 30
+   alpha = 0.05
+   N_sim = 500
+
+3. Define true mean values:
+   5, 5.5, 6, 6.5, 7, 7.5, 8
+
+4. Create arrays to store:
+   Power of t-test
+   Power of z-test
+
+5. FOR each true mean:
+
+      Set t-test rejection count = 0
+      Set z-test rejection count = 0
+
+      FOR 500 simulations:
+
+          Generate a random sample
+          from Normal distribution.
+
+          Perform one-sample t-test.
+
+          IF p-value < alpha:
+              Increase t-test rejection count.
+
+          Calculate z-test statistic.
+
+          Calculate z-test p-value.
+
+          IF p-value < alpha:
+              Increase z-test rejection count.
+
+      Calculate:
+          t-test power = rejection count / 500
+          z-test power = rejection count / 500
+
+6. Display the power values.
+
+7. Plot:
+      True Mean vs t-test Power
+      True Mean vs z-test Power
+
+8. Save the graph as a PDF file.
+
+END
+```

@@ -1,0 +1,69 @@
+## Experiment E3-3: Simulate Type I and Type II Errors in Hypothesis Testing
+
+### Theory
+
+In hypothesis testing, two common types of errors can occur.
+
+**Type I Error:** It occurs when we reject the null hypothesis \(H_0\) even though \(H_0\) is actually true. The probability of Type I Error is represented by **α (alpha)**.
+
+**Type II Error:** It occurs when we fail to reject \(H_0\) even though the alternative hypothesis \(H_1\) is actually true. The probability of Type II Error is represented by **β (beta)**.
+
+In this experiment, we simulate 1000 samples. For Type I Error, the true mean is 5 and we test \(H_0:\mu=5\). For Type II Error, the true mean is 6, but we test \(H_0:\mu=5\). A significance level of 0.05 is used.
+
+### Objectives
+
+1. To understand Type I and Type II errors.
+2. To simulate hypothesis testing using random samples.
+3. To estimate the Type I Error Rate.
+4. To estimate the Type II Error Rate.
+5. To visualize both error rates using a bar graph.
+
+### Pseudocode
+
+```text
+START
+
+Set sample size n = 30
+Set number of simulations = 1000
+Set significance level alpha = 0.05
+
+Set Type I error count = 0
+Set Type II error count = 0
+
+FOR i = 1 to 1000
+
+    Generate sample from Normal distribution
+    with mean = 5 and standard deviation = 2
+
+    Perform t-test for H0: mu = 5
+
+    IF p-value < alpha
+        Increase Type I error count
+    END IF
+
+
+    Generate sample from Normal distribution
+    with mean = 6 and standard deviation = 2
+
+    Perform t-test for H0: mu = 5
+
+    IF p-value >= alpha
+        Increase Type II error count
+    END IF
+
+END FOR
+
+Calculate:
+    Type I Error Rate = Type I count / 1000
+    Type II Error Rate = Type II count / 1000
+
+Display both error rates
+
+Create a bar graph
+Show Type I Error Rate
+Show Type II Error Rate
+
+Save the graph as a PDF
+
+END
+```

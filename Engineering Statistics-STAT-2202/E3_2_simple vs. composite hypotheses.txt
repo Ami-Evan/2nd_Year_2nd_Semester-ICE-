@@ -1,0 +1,66 @@
+## Experiment E3-2: Derive the Best Critical Region for Simple vs Composite Hypotheses
+
+### Theory
+
+A **critical region** is the range of sample values for which the null hypothesis \(H_0\) is rejected. In this experiment, we consider:
+
+* \(H_0: \mu = 0\)
+* \(H_1: \mu = 2\)
+* Standard deviation, \(\sigma = 1\)
+* Significance level, \(\alpha = 0.05\)
+
+Since the alternative hypothesis has a larger mean, a **right-tailed test** is used. The critical value is obtained from the standard normal distribution. At \(\alpha=0.05\), the critical value is approximately **1.645**.
+
+Therefore, the best critical region is:
+
+$$
+\bar{x} > 1.645
+$$
+
+If the sample mean is greater than 1.645, we reject \(H_0\).
+
+### Objectives
+
+1. To understand the concept of a critical region.
+2. To determine the critical value for a given significance level.
+3. To compare the distributions under \(H_0\) and \(H_1\).
+4. To visualize the critical region using a graph.
+5. To understand when the null hypothesis should be rejected.
+
+### Pseudocode
+
+```text
+START
+
+Set significance level alpha = 0.05
+
+Define:
+    H0: mu = 0
+    H1: mu = 2
+    sigma = 1
+
+Calculate critical value using normal distribution:
+    critical_value = qnorm(1 - alpha)
+
+Display critical value
+
+Set x values from -4 to 6
+
+Calculate normal density under H0
+Calculate normal density under H1
+
+Create a PDF file
+
+Plot H0 distribution
+Plot H1 distribution
+Draw a vertical line at the critical value
+
+Add graph title, axis labels, and legend
+
+Close the PDF file
+
+Display:
+    Reject H0 if sample mean > critical value
+
+END
+```
