@@ -3,21 +3,29 @@
 set.seed(123)
 
 n <- 1000
+
 df1 <- 5
+
 df2 <- 10
 
 # Generate two chi-square samples
+
 chi1 <- rchisq(n, df1)
+
 chi2 <- rchisq(n, df2)
 
 # Build F data manually
+
 F_data <- (chi1 / df1) / (chi2 / df2)
 
 # Display results
+
 cat("Mean of simulated F data:", mean(F_data), "\n")
+
 cat("Theoretical mean of F(df1, df2):", df2 / (df2 - 2), "\n")
 
 # Save graph as PDF
+
 pdf("E1_1_F_Distribution.pdf", width = 8, height = 6)
 
 hist(F_data,
@@ -28,10 +36,13 @@ hist(F_data,
      xlab = "F value")
 
 # Add theoretical F density curve
+
 curve(df(x, df1, df2),
       add = TRUE,
       col = "red",
       lwd = 2)
+
+# Add legend
 
 legend("topright",
        legend = "Theoretical F density",
@@ -39,8 +50,9 @@ legend("topright",
        lwd = 2,
        bty = "n")
 
-dev.off()
+# Close PDF file
 
+dev.off()
 
 
 
