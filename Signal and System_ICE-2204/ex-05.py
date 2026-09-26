@@ -1,3 +1,5 @@
+# Explain and implementation of Convolution operation of sequences. 
+
 import numpy as np
 import matplotlib.pyplot as plt
 
