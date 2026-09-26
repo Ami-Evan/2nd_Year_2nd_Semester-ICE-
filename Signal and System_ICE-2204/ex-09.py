@@ -1,3 +1,12 @@
+# Removing Noise from an Audio Signal 
+#   Steps: 
+# a.    Generate an audio signal (a pure sine wave of 440 Hz). 
+# b. Add random noise. 
+# c. Apply DFT to transform the signal to the frequency domain. 
+# d. Remove noise by filtering high frequencies. 
+# e. Apply Inverse DFT to get back the cleaned signal. 
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 

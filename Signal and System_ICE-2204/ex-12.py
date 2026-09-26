@@ -1,3 +1,10 @@
+# Show Fourier series approximation of square wave: 
+      
+#   [          
+            
+            
+#             ] 
+
 import numpy as np
 import matplotlib.pyplot as plt
 

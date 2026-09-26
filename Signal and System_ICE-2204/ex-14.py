@@ -1,3 +1,7 @@
+# Determine the discrete-time Fourier transform and show magnitude, angle, real and 
+# imaginary part of the following finite-duration sequence:                  at 501 
+# equispaced frequency between       .
+
 import numpy as np
 import matplotlib.pyplot as plt
 

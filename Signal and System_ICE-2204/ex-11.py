@@ -1,3 +1,5 @@
+# Show Power Density Spectrum of a Square Wave. 
+
 import numpy as np
 import matplotlib.pyplot as plt
 

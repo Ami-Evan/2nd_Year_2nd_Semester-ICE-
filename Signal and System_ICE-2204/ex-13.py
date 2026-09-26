@@ -1,3 +1,7 @@
+# To find the amplitude spectrum of the multi frequency signal:  
+                                                                              
+# And also show approximate the Fourier transform integral for 0 ≤ f ≤ 900 Hz. 
+
 import numpy as np
 import matplotlib.pyplot as plt
 

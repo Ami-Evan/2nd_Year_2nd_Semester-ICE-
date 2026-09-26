@@ -1,3 +1,8 @@
+# Explain and Implementation of following Elementary Discrete Signals Using 
+# MATLAB/Python 
+#         i)  The unit sample sequence.        ii)  The unit step signal.       iii)  The unit 
+# ramp signal. 
+
 import numpy as np
 import matplotlib.pyplot as plt
 

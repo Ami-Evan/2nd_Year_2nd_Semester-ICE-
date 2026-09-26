@@ -1,3 +1,6 @@
+# Explain and implement Discrete Fourier transform (DFT) and Inverse Discrete Fourier 
+# Transform (IDFT) using MATLAB/Python. 
+
 import numpy as np
 import matplotlib.pyplot as plt
 

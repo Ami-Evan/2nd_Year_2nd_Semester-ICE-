@@ -1,3 +1,6 @@
+# Explain and generate sinusoidal wave with different frequency using 
+# MATLAB/Python. 
+
 import numpy as np                  # NumPy library
 import matplotlib.pyplot as plt     # Graph আঁকার জন্য
 

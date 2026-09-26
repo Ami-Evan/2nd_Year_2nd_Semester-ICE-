@@ -1,3 +1,7 @@
+# Extract relevant features such as systolic peaks, diastolic points, and heart rate from 
+# PPG signal.
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 

@@ -1,3 +1,6 @@
+# Plot following signal operations using user defined function  - i) Addition ii) Folding 
+#                 iii) Signal shifting 
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -17,7 +20,7 @@ def shifting(x, k):
     return np.roll(x, k)
 
 
-# Original Signals
+# Original Signals(sample index)
 n = np.arange(5)
 
 x1 = np.array([1, 2, 3, 2, 1])
@@ -34,7 +37,8 @@ y_fold = folding(x)
 
 
 # Shifting
-y_shift = shifting(x, 2)
+k = int(input("Enter shifting value: "))
+y_shift = shifting(x, k)
 
 
 # -------- All Graphs in One Window --------
